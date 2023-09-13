@@ -6,13 +6,14 @@ import './HomePage.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {useRef} from 'react';
-import pdf from './Prudhvi-Resume.pdf';
+import pdf from './Resume_.pdf';
 // import resumePdf from '../Pages/Prudhvi-Resume.pdf';
 
 const HomePage = () =>{
     const myref = useRef(null);
     const myref2 = useRef(null);
     const myref3 = useRef(null);
+    const myref4 = useRef(null);
 
 
     useEffect(() => {
@@ -37,6 +38,10 @@ const HomePage = () =>{
         myref3.current?.scrollIntoView({behavior: 'smooth'});
       };
 
+      const handleClick4 = () => {
+        myref4.current?.scrollIntoView({behavior: 'smooth'});
+      };
+
       const awsRedirect = () =>{
         window.location.href = 'https://www.coursera.org/account/accomplishments/certificate/EHUGNG8ENRU8';
       }
@@ -53,14 +58,14 @@ const HomePage = () =>{
     <div className="body">
 
       <div className="Header container">
-        <div className="row">
+      <div className="row" style={{ paddingTop: '10px' }}>
           <div className="col-lg-2"></div>
           <div className="col-lg-2"></div>
           <div className="col-lg-8 menu-tabs">
             <span className="navbarTabs" onClick={handleClick}>About Me🙋‍♂️</span>
             <span className="navbarTabs" onClick={handleClick2}>Projects🏗️</span>
             <span className="navbarTabs" onClick={handleClick3}>Certificates🥇</span>
-            <span className="navbarTabs" onClick={handleClick}>Contact☎️</span>
+            <span className="navbarTabs" onClick={handleClick4}>Contact☎️</span>
             <span className="navbarTabs" onClick={handleResumepdf}>Resume📄</span>
           </div>
         </div>
@@ -75,9 +80,9 @@ const HomePage = () =>{
                 </div>
                 <div className="col-lg">
                       <h2>Hey Hi👋</h2>
-                      <h3>Hi, I'm Prudhvi. A passionate <b>Front-end React Developer</b> based in San Jose, CA. 📍</h3>
+                      <h2>I'm Prudhvi. A passionate <b>Full Stack Developer</b> based in San Jose, CA. 📍</h2>
                       <div class="move">
-                        <h4 onClick={handleClick}>Know Me👇</h4>
+                        <h3 onClick={handleClick}>Know Me👇</h3>
                       </div>
                 </div>
               </div>
@@ -91,14 +96,14 @@ const HomePage = () =>{
 
                     <div className="row">
                       <div className="col-lg-5">
-                        <div className="xx"></div>
+                        <div className="xxx"></div>
                       </div>
                       <div className="col-lg">
                             <h1>About Me🙋‍♂️</h1>
-                            <h5> I am a graduate student at <b>San Jose State University,</b> pursuing Master's in Software Engineering.
-                                  I worked as a Associate Software Engineer & Data Analyst Engineer at Abjayon.Inc, Hyderabad, India from October, 2020 to June, 2022.
-                                  I have graduated in 2020 as a Bachelors of Technology (B.Tech) in Computer Science and Engg. from Sreenidhi Institute of Science and Technology, Telangana.
-                                  In my last professional experience, my day to day activities majorly involved in understanding user stories from clients, developing applications according to wireframe models, regressive testing, working with raw data to analyze and visualize using Google Analytics and Google Data Studio, and developing important POCs for the organization. 
+                            <h5> I am a graduate student at <b>San Jose State University🏫,</b> pursuing Master's in Software Engineering🎓.
+                                  I worked as a Associate Software Engineer & Data Analyst Engineer at Abjayon.Inc👔, Hyderabad, India🇮🇳 from October, 2020 to June, 2022.
+                                  I have graduated in 2020 as a Bachelors of Technology (B.Tech) in Computer Science and Engg 👨‍💻. from Sreenidhi Institute of Science and Technology, Telangana.
+                                  In my last professional experience, my day to day activities majorly involved in understanding user stories from clients, developing applications according to wireframe models, regressive testing, working with raw data to analyze and visualize using Google Analytics📈 and Google Data Studio 📊, and developing important POCs for the organization. 
                             </h5>
                             <div className="move">
                                 <h4 onClick={handleClick2}>Wanna See Projects that i worked on🤔?</h4>
@@ -123,7 +128,13 @@ const HomePage = () =>{
                           <div className="container">
                             <div className="row ">
                               <div className="col-sm">
-                                <a href="https://github.com/gopinathsjsu/team-project-team-four"><img src="./github-mark.png" alt="Github"></img></a>
+                              <button className="btn btn-primary"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    window.open('https://github.com/gopinathsjsu/team-project-team-four', '_blank');
+                                  }}
+                                >Github</button>
+                                {/* <a href="https://github.com/gopinathsjsu/team-project-team-four"><img src="./github-mark.png" alt="Github"></img></a> */}
                               </div>
                             </div>
                           </div>
@@ -135,7 +146,13 @@ const HomePage = () =>{
                           <div className="container">
                             <div className="row ">
                               <div className="col-sm">
-                                <a href="https://github.com/aman-kaur-11/cmpe255_group_gapv"><img src="./github-mark.png" alt="Github"></img></a>
+                              <button className="btn btn-primary"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    window.open('https://github.com/aman-kaur-11/cmpe255_group_gapv', '_blank');
+                                  }}
+                                >Github</button>
+                                {/* <a href="https://github.com/aman-kaur-11/cmpe255_group_gapv"><img src="./github-logo.png" alt="Githubb"></img></a> */}
                               </div>
                             </div>
                           </div>
@@ -148,7 +165,12 @@ const HomePage = () =>{
                           <div className="container">
                             <div className="row ">
                               <div className="col-sm">
-                                <a href="https://github.com/paavamaani/Security-Robot"><img src="./github-mark.png" alt="Github"></img></a>
+                              <button className="btn btn-primary"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    window.open('https://github.com/prudhvimvns/security_robot', '_blank');
+                                  }}
+                                >Github</button>
                               </div>
                             </div>
                           </div>
@@ -158,14 +180,20 @@ const HomePage = () =>{
         </div>
 
 
-        <div ref={myref3} data-aos="fade-right" data-aos-duration="3000" data-aos-easing="ease-out-cubic" className="Section">
+        <div ref={myref3} data-aos="fade-left" data-aos-duration="3000" data-aos-easing="ease-out-cubic" className="Section">
           <h2>Certificates 🥇</h2>
                 <div class="container">
                       <div class="row">
                         <div class="col-sm outerBox2">
                           <div className="aws" onClick={awsRedirect}></div>
                               <div className="col-sm">
-                                <a href="https://www.coursera.org/account/accomplishments/certificate/EHUGNG8ENRU8"><img src="./aws.png" alt="AWS"></img></a>
+                              <button className="btn btn-primary"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    window.open('https://www.coursera.org/account/accomplishments/certificate/EHUGNG8ENRU8', '_blank');
+                                  }}
+                                >View</button>
+                                {/* <a href="https://www.coursera.org/account/accomplishments/certificate/EHUGNG8ENRU8"><img src="./aws.png" alt="AWS"></img></a> */}
                               </div>
                         </div>
                         <div class="col-sm outerBox2">
@@ -173,7 +201,13 @@ const HomePage = () =>{
                           <div className="container">
                             <div className="row ">
                               <div className="col-sm">
-                                <a href="https://www.coursera.org/account/accomplishments/certificate/GGGVLH6L57FH"><img src="./ml.png" alt="ML"></img></a>
+                              <button className="btn btn-primary"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    window.open('https://www.coursera.org/account/accomplishments/certificate/GGGVLH6L57FH', '_blank');
+                                  }}
+                                >View</button>
+                                {/* <a href="https://www.coursera.org/account/accomplishments/certificate/GGGVLH6L57FH"><img src="./ml.png" alt="ML"></img></a> */}
                               </div>
                             </div>
                           </div>
@@ -185,7 +219,13 @@ const HomePage = () =>{
                         <div class="col-sm outerBox2">
                           <div className="GA" onClick={GARedirect}></div>
                                 <div className="col-sm">
-                                    <a href="https://analytics.google.com/analytics/academy/certificate/ObBKGYYbQ5-PBTl2z5AKIg"><img src="./GA.png" alt="Google Analytics Cerificate"></img></a>
+                                <button className="btn btn-primary"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    window.open('https://analytics.google.com/analytics/academy/certificate/ObBKGYYbQ5-PBTl2z5AKIg', '_blank');
+                                  }}
+                                >View</button>
+                                    {/* <a href="https://analytics.google.com/analytics/academy/certificate/ObBKGYYbQ5-PBTl2z5AKIg"><img src="./GA.png" alt="Google Analytics Cerificate"></img></a> */}
                                 </div>     
                          </div>
                         <div class="col-sm outerBox2">
@@ -196,7 +236,7 @@ const HomePage = () =>{
 
         
 
-        <div data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000" className="Section">
+        <div ref={myref4} data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000" className="Section">
           <div className="contactDiv">
             <h1>Get In Touch👇</h1>
             <div className="contactPara">
